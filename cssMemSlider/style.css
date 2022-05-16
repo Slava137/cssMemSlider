@@ -10,14 +10,23 @@ html {
     box-sizing: border-box;
     font-family: "Roboto", "Arial", sans-serif;  
     font-size: 62.5%;
-    line-height: 62.5%;
-    background-color: orange;    
+    line-height: 62.5%;    
 } 
+
+body {
+    background: url(assets/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .wrapper {
     margin: 0rem auto;
     width: 76.7rem;
-    background-color: gray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .radio__input {
@@ -29,12 +38,18 @@ html {
     display: flex;
     width: inherit;
     overflow: hidden;
+    border-radius: 3.0rem;
+}
+
+img {
+    width: 100%;
 }
 
 .description {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center; 
+    
 }
 
 .text {
@@ -42,9 +57,40 @@ html {
     height: 2.6rem;
     font-size: 2.0rem;
     line-height: 2.4rem;
-    overflow: hidden;    
+    font-weight: 700;
+    overflow: hidden;
+    background-color: #fff; 
+    border-radius: 1.5rem   
 }
 
 .controls {
     display: flex;
+    gap: 0.9rem;
+    background-color: #fff;
+    border-radius: 1.5rem   
 }
+
+label {
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+}
+
+.input__button {
+    display: inline-block;
+    width: 1.0rem;
+    height: 1.0rem;
+    border-radius: 50%;
+    background-color: red;
+    border:  .4rem solid #000000;
+}
+
+label:hover .input__button {
+    background-color: white;
+}
+
+label:active .input__button {
+    background-color: #000000;
+    border-color: red;
+}
+
