@@ -38,24 +38,25 @@ body {
     display: flex;
     width: inherit;
     overflow: hidden;
-    border-radius: 3.0rem;
+    border-radius: 3.0rem;    
 }
 
 img {
     width: 100%;
+    transition: .4s ease-in-out;
 }
 
 .description {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    
+    justify-content: space-between;   
 }
 
 .text {
-    width: 35rem;
-    height: 2.6rem;
-    font-size: 2.0rem;
+    display: flex;
+    align-items: center;
+    width: 42rem;
+    height: 4.0rem;
+    font-size: 2.2rem;
     line-height: 2.4rem;
     font-weight: 700;
     overflow: hidden;
@@ -63,34 +64,98 @@ img {
     border-radius: 1.5rem   
 }
 
+p { 
+    min-width: 42rem;
+    text-align: center;
+    white-space: nowrap;
+    transition: .4s ease-in-out;
+}
+
 .controls {
     display: flex;
-    gap: 0.9rem;
+    align-items: center;
+    gap: 1.0rem;
+    height: 4.0rem;
     background-color: #fff;
     border-radius: 1.5rem   
 }
 
 label {
-    width: 2.2rem;
-    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
     cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 .input__button {
     display: inline-block;
-    width: 1.0rem;
-    height: 1.0rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
     background-color: red;
-    border:  .4rem solid #000000;
+    border: .4rem solid #000000;
 }
 
 label:hover .input__button {
-    background-color: white;
+    background-color: gold;
+    border-color: gold;
 }
 
 label:active .input__button {
-    background-color: #000000;
-    border-color: red;
+    background-color: #ffffff;
+    border-color: orangered;
 }
 
+#first:checked ~ .description .controls label[for=first] .input__button,
+#second:checked ~ .description .controls label[for=second] .input__button,
+#third:checked ~ .description .controls label[for=third] .input__button,
+#fourth:checked ~ .description .controls label[for=fourth] .input__button,
+#fifth:checked ~ .description .controls label[for=fifth] .input__button,
+#sixth:checked ~ .description .controls label[for=sixth] .input__button,
+#seventh:checked ~ .description .controls label[for=seventh] .input__button,
+#eighth:checked ~ .description .controls label[for=eighth] .input__button {
+    background-color: green;
+}
+
+#first:checked ~ .slider .image_first,
+#first:checked ~ .description .text .first__text {
+    margin-left: 0;
+}
+
+#second:checked ~ .slider .image_first,
+#second:checked ~ .description .text .first__text {
+    margin-left: -100%;
+}
+
+#third:checked ~ .slider .image_first,
+#third:checked ~ .description .text .first__text{
+    margin-left: -200%;
+}
+
+#fourth:checked ~ .slider .image_first,
+#fourth:checked ~ .description .text .first__text{
+    margin-left: -300%;
+}
+
+#fifth:checked ~ .slider .image_first,
+#fifth:checked ~ .description .text .first__text{
+    margin-left: -400%;
+}
+
+#sixth:checked ~ .slider .image_first,
+#sixth:checked ~ .description .text .first__text{
+    margin-left: -500%;
+}
+
+#seventh:checked ~ .slider .image_first,
+#seventh:checked ~ .description .text .first__text{
+    margin-left: -600%;
+}
+
+#eighth:checked ~ .slider .image_first,
+#eighth:checked ~ .description .text .first__text{
+    margin-left: -700%;
+}
